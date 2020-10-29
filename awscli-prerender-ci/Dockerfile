@@ -27,12 +27,11 @@ RUN apt-get install -yq \
 RUN chown -R root /usr/local
 RUN mkdir /usr/local/nvm
 ENV NVM_DIR /usr/local/nvm
-ENV NODE_VERSION 12.16.3
+ENV NODE_VERSION 12.19.0
 
-RUN curl --silent -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+RUN curl --silent -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh | bash
 
 RUN source $NVM_DIR/nvm.sh \
-    && nvm install $NODE_VERSION \
     && nvm alias default $NODE_VERSION \
     && nvm use default
 

@@ -18,7 +18,10 @@ RUN apt-get install -yq libgconf-2-4 \
       curl \
       ca-certificates \
       gnupg-agent \
-      software-properties-common
+      software-properties-common \
+      imagemagick \
+      ghostscript \
+      poppler-utils
 
 RUN curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
 
